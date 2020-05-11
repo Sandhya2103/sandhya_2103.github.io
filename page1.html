@@ -1,0 +1,27 @@
+<html>
+<script LANGUAGE="JavaScript">
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+params = getParams();
+Shopname = unescape(params["shop-name"]);
+Jobtitle = unescape(params["job-title"]);
+Location=unescape(params["location"]);
+phone = unescape(params["your-phone"]);
+Desc =unescape(params["Desc-Text"]);
+document.write("ShopName = " + Shopname + "<br>");
+document.write("Jobtitle = " + Jobtitle + "<br>");
+document.write("Location = " + Location + "<br>");
+document.write("Phone Number = " + phone + "<br>");
+document.write("Description= " + Desc+ "<br>");
+</script>
+</html>

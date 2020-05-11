@@ -1,0 +1,47 @@
+<html>
+
+<body>
+<form action="display.html" >
+
+
+                SHOP NAME	<input id="shop-name" type="text" name="shop-name" placeholder="Shop name"><br>
+              
+               
+                JOB TITLE 	<input id="job-title" type="text"  name="job-title" placeholder="Job Title"><br>
+               
+               
+               
+			
+                PHONE		<input id="phone" type="tel"  name="your-phone" placeholder="Phone Number" ><br>
+               
+
+				SUBMIT		<input id="submit" type="submit" value="submit" name="" onclick="processForm();"><br>
+                          
+              
+            
+                
+
+</form>
+
+<script>
+function processForm(){
+var shop=document.getElementById("shop-name").value;
+var job=document.getElementById("job-title").value;
+var phone=document.getElementById("phone").value;
+
+localStorage.setItem("shop",shop);
+localStorage.setItem("job",job);
+localStorage.setItem("phone",phone);
+
+localStorage.remove("shop");
+
+return false;
+
+}
+
+</script>
+
+</body>
+
+
+</html>
